@@ -1,0 +1,17 @@
+# Turning on the rewrite engine  so that we can change the default server behaviour
+RewriteEngine On
+
+#This part just tells the server the base directory from which to do redirects. The goal is to target the "index.php" file anytime a user lands on our website
+# Rewritebase /localhost
+
+# ***********Next lets write some conditions for the server*******
+#1. Checking that the requested url path does not (necessarily) match an directory on our server
+RewriteCond %{REQUEST_FILENAME} !-d
+
+#1. Checking that the requested url path (necessarily) matches an file on our server
+RewriteCond %{REQUEST_FILENAME}\.php -f
+
+
+# *********** Next, if both conditions are satisfied, we write the following rule to extract the url string from the url  bar of the visitor's browser and pass that to the "index.php" file (well, technically, this url string actually gets passed the parseUrl() method of the "App" class. Basically, method existing in the "index.php" file that uses the global &_GET statement will be able to trap the url if it accesses it by the right key. For example, $_GET["url] will get the url only if we collect and store the url string as "url" right here in this .htaccess file. Anyway, that's the key we'll use to store the url string - as "url"...lol. Okay. that's enough explanation. Timee to write the rule) ************
+
+RewriteRule ^(.*)$ $1.php

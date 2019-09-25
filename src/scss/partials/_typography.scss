@@ -1,0 +1,96 @@
+@include google-font("Montserrat");
+@include google-font("Roboto+Slab");
+
+/* Font Families */
+$primaryFont: "Open Sans", sans-serif;
+$secondaryFont: "Montserrat";
+$tertiaryFont: "Roboto Condensed";
+$testFont: "Caviar Dreams";
+
+// Font Sizes
+$baseFont: 100%;
+$lineHeight: 1.5;
+
+
+// ********* Using the second-major(1.125) type scale ********
+
+body {
+    font-size: $baseFont;
+    line-height: $lineHeight;
+    font-family: $primaryFont;
+}
+
+// Set margin bottom of text related elements to half the value of the base line height
+// in order or create a vertical rhythm.
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+ul,
+figure,
+table,
+hr,
+blockquote {
+    margin-bottom: calc(#{$lineHeight}rem / 2);
+}
+
+
+
+.yotta {
+    font-size: 2.28rem;
+}
+
+.zetta {
+    font-size: 2.027rem;
+}
+
+h1, .exa {
+    font-size: 1.802rem;
+}
+
+h2, .peta {
+    font-size: 1.602rem;
+}
+
+h3, .tera {
+    font-size: 1.424rem;
+}
+
+h4, .giga {
+    font-size: 1.266rem;
+}
+
+h5, .maga {
+    font-size: 1.125rem;
+}
+
+h6, .kilo {
+    font-size: 1rem; // Same as the default font sixe of the paragraph element
+}
+
+
+.milli {
+    font-size: .889rem;
+}
+
+.micro  {
+    font-size: 0.79rem;
+}
+
+// Set Font Weights
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+
+
+// Some Beta Styles
+h1.headline {
+    @extend .yotta;
+    font-size: 3rem;
+    font-weight: 900;
+}

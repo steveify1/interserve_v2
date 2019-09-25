@@ -1,0 +1,10 @@
+node_modules
+# dist
+# src/font-awesome-4.7.0
+src/slider/font-awesome-4.7.0
+src/slider/index.html
+src/slider/img
+src/slider/css
+src/slider/js/slider.min.js
+External\ Assets
+docs

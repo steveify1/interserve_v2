@@ -1,0 +1,25 @@
+{
+	"name": "interserve",
+	"version": "1.0.0",
+	"description": "A website for a civil engineering company.",
+	"main": "src/js/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "webpack-dev-server --output-public-path=/dist/",
+		"start": "webpack --config webpack.config.js -w",
+		"sass": "sass --watch src/scss/style.scss:dist/style.css"
+	},
+	"author": "Nwakasi Stephen",
+	"license": "ISC",
+
+	"devDependencies": {
+		"babel-core": "^6.26.3",
+		"babel-loader": "^7.1.5",
+		"babel-polyfill": "^6.26.0",
+		"babel-preset-env": "^1.7.0",
+		"babel-preset-stage-0": "^6.24.1",
+		"webpack": "^4.32.2",
+		"webpack-cli": "^3.3.2",
+		"webpack-dev-server": "^3.5.1"
+	}
+}
