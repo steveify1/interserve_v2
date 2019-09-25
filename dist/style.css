@@ -1452,6 +1452,7 @@ main article .section-title::before,
 
 /* WHY INTERSEVE */
 main article#why-us {
+  margin-top: 3em;
   background: #e2e2e2;
   background: #fbf96e;
   background: #111131;
@@ -1825,7 +1826,7 @@ main article#safety-standard > .section-body #safety-standard_text {
     width: 95%;
     margin: auto;
     left: 50%;
-    bottom: 10%;
+    bottom: 20%;
     -o-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
@@ -2135,12 +2136,12 @@ form.on-page-contact-form p {
   padding: 1em 1em;
   overflow-y: hidden;
   background: #fff;
-  text-align: center;
 }
 #services-container #services-list article.service-desc:not(:last-child) {
   margin-bottom: 2em;
 }
 #services-container #services-list article.service-desc .title {
+  text-align: center;
   text-transform: capitalize;
   color: #111131;
   font-weight: 900;

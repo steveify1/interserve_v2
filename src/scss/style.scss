@@ -1043,7 +1043,7 @@ main article .section-title,
 
 /* WHY INTERSEVE */
 main article#why-us {
-	// margin-top: 4em;
+	margin-top: 3em;
 	background: $lightGray;
 	background: rgb(251, 249, 110);
 	background: $primaryColorDark;
@@ -1412,7 +1412,6 @@ main article#safety-standard {
 			height: 100%;
 			height: 90%;
 			justify-content: center;
-			// @include alignItems(center);
 		}
 
 		#safety-standard_img {
@@ -1438,9 +1437,8 @@ main article#safety-standard {
 				padding: 1em 0.5em;
 				width: 95%;
 				margin: auto;
-				// position: absolute;
 				left: 50%;
-				bottom: 10%;
+				bottom: 20%;
 				@include transform(translateX(-50%));
 				@include boxShadow(0 6px 5px rgba(0, 0, 0, 0.1));
 				@include borderRadius($cardRadius);
@@ -1762,13 +1760,13 @@ form.on-page-contact-form {
 			padding: 1em 1em;
 			overflow-y: hidden;
 			background: $white;
-			text-align: center;
 
 			&:not(:last-child) {
 				margin-bottom: 2em;
 			}
 
 			.title {
+				text-align: center;
 				text-transform: capitalize;
 				color: $primaryColorDark;
 				font-weight: 900;
