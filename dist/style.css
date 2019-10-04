@@ -1,14 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Montserrat&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:600&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:900&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Questrial&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Quicksand&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Quicksand:900&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Quicksand:600&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans&display=swap);
 /*
 Sass Reset - Converted by Hampton Catlin
 A modification of the original found at...
@@ -94,7 +91,8 @@ summary,
 time,
 mark,
 audio,
-video {
+video,
+button {
   margin: 0;
   padding: 0;
   border: 0;
@@ -170,10 +168,10 @@ table {
 /* Grid System */
 /* Center Objects: The following mixins will center an object cross-center, vertically and horizontally, respecetively */
 /* Font Families */
-body {
+body, a, button {
   font-size: 100%;
   line-height: 1.5;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 h1,
@@ -193,7 +191,7 @@ blockquote {
   margin-bottom: calc(1.5rem / 2);
 }
 
-.yotta, h1.headline {
+.yotta {
   font-size: 2.28rem;
 }
 
@@ -227,7 +225,7 @@ main article#get-quote-find-estimate > section.container #find-estimate .descrip
   font-size: 1rem;
 }
 
-.milli, form.on-page-contact-form .btn, form.on-page-contact-form #main-menu .menu-item.show-quotation, #main-menu form.on-page-contact-form .menu-item.show-quotation, form.form .btn, form.form #main-menu .menu-item.show-quotation, #main-menu form.form .menu-item.show-quotation, form.form .form-group label {
+.milli, form.on-page-contact-form .btn, form.on-page-contact-form #main-menu .menu-item .show-quotation, #main-menu .menu-item form.on-page-contact-form .show-quotation, form.form .btn, form.form #main-menu .menu-item .show-quotation, #main-menu .menu-item form.form .show-quotation, form.form .form-group label {
   font-size: 0.889rem;
 }
 
@@ -239,18 +237,23 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
-h1.headline {
-  font-size: 3rem;
+.headline {
+  font-size: 2rem;
   font-weight: 900;
 }
+@media screen and (min-width: 769px) {
+  .headline {
+    font-size: 2.8rem;
+  }
+}
 
-.btn, #main-menu .menu-item.show-quotation {
+.btn, #main-menu .menu-item .show-quotation {
   outline: none;
   border: none;
   cursor: pointer;
   padding: 0.5em 0.875em;
 }
-.btn:hover, #main-menu .menu-item.show-quotation:hover {
+.btn:hover, #main-menu .menu-item .show-quotation:hover {
   opacity: 0.8;
 }
 .btn-secondary {
@@ -524,6 +527,22 @@ textarea {
   padding: 0.5em;
 }
 
+i[class*=facebook] {
+  color: #3838a3;
+}
+
+i[class*=instagram] {
+  color: #92043a;
+}
+
+i[class*=linkedin] {
+  color: rgba(56, 56, 163, 0.8);
+}
+
+i[class*=twitter] {
+  color: #229cee;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -532,11 +551,10 @@ textarea {
 }
 
 body {
-  font-family: "Open Sans", "Roboto", sans-serif;
   letter-spacing: 1px;
   line-height: inherit;
   margin: inherit;
-  background: #fafafa;
+  background: #ebfeff;
   overflow-x: hidden;
   position: relative;
   max-width: 100vw;
@@ -556,18 +574,14 @@ body::-webkit-scrollbar-thumb {
 
 a,
 .btn,
-#main-menu .menu-item.show-quotation,
-label,
-input,
-select,
-select > option,
-textarea {
-  font-family: #3838a3;
+#main-menu .menu-item .show-quotation,
+label {
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 a,
 .btn,
-#main-menu .menu-item.show-quotation,
+#main-menu .menu-item .show-quotation,
 .show-quotation {
   cursor: pointer;
 }
@@ -584,20 +598,20 @@ a.link {
   color: #229cee;
 }
 
-.btn, #main-menu .menu-item.show-quotation {
+.btn, #main-menu .menu-item .show-quotation {
   border: none;
   outline: none;
   text-transform: capitalize;
-  -o-border-radius: 40px;
-  -ms-border-radius: 40px;
-  -moz-border-radius: 40px;
-  -webkit-border-radius: 40px;
-  -khtml-border-radius: 40px;
-  border-radius: 40px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
   padding: 0.8em 1.3em;
   width: fit-content;
   color: #fff;
-  background: #111131;
+  background: #3838a3;
   -o-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -605,41 +619,41 @@ a.link {
   transition: all 0.4s ease;
 }
 @media screen and (min-width: 576px) {
-  .btn, #main-menu .menu-item.show-quotation {
+  .btn, #main-menu .menu-item .show-quotation {
     font-size: 0.9rem;
   }
 }
 @media screen and (min-width: 900px) {
-  .btn, #main-menu .menu-item.show-quotation {
+  .btn, #main-menu .menu-item .show-quotation {
     font-size: 1.1em;
   }
 }
-.btn.btn-hollow, #main-menu .btn-hollow.menu-item.show-quotation, .btn.btn-hollow-invert, #main-menu .btn-hollow-invert.menu-item.show-quotation {
+.btn.btn-hollow, #main-menu .menu-item .btn-hollow.show-quotation, .btn.btn-hollow-invert, #main-menu .menu-item .btn-hollow-invert.show-quotation {
   background: transparent;
 }
-.btn.btn-hollow, #main-menu .btn-hollow.menu-item.show-quotation {
+.btn.btn-hollow, #main-menu .menu-item .btn-hollow.show-quotation {
   border: 1px solid #3838a3;
   color: #3838a3;
 }
-.btn.btn-hollow:hover, #main-menu .btn-hollow.menu-item.show-quotation:hover {
+.btn.btn-hollow:hover, #main-menu .menu-item .btn-hollow.show-quotation:hover {
   background-color: #3838a3;
   color: #fff;
 }
-.btn.btn-hollow-invert, #main-menu .btn-hollow-invert.menu-item.show-quotation {
+.btn.btn-hollow-invert, #main-menu .menu-item .btn-hollow-invert.show-quotation {
   border: 1px solid #fff;
   color: #fff;
 }
-.btn:hover, #main-menu .menu-item.show-quotation:hover {
+.btn:hover, #main-menu .menu-item .show-quotation:hover {
   border-color: transparent;
   opacity: 0.95;
   color: #fff;
 }
 
-.btn.btn-full-width, #main-menu .btn-full-width.menu-item.show-quotation {
+.btn.btn-full-width, #main-menu .menu-item .btn-full-width.show-quotation {
   width: 100%;
 }
 
-.btn.btn-shadow, #main-menu .btn-shadow.menu-item.show-quotation {
+.btn.btn-shadow, #main-menu .menu-item .btn-shadow.show-quotation {
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.3);
 }
 
@@ -671,7 +685,6 @@ form.form .form-group label {
 }
 form.form .form-group input,
 form.form .form-group select,
-form.form .form-group option,
 form.form .form-group textarea {
   padding: 0.5em 0.3em;
   -o-border-radius: 5px;
@@ -716,7 +729,6 @@ ul {
   list-style-type: none;
 }
 
-/* ********* TYPOGRAPHY ********** */
 /********************************************
 ***** JAVASCRIPT STYLE NIGGAS *****
 ********************************************/
@@ -916,7 +928,7 @@ nav#main-nav.nav-fixed #logo p {
 
 #main-menu {
   display: block;
-  background: #fff;
+  background: #111131;
   width: 80%;
   padding: 4em 0;
   position: fixed;
@@ -924,7 +936,7 @@ nav#main-nav.nav-fixed #logo p {
   bottom: 0;
   left: 0;
   height: 100vh;
-  z-index: 20;
+  z-index: 300;
 }
 
 #main-menu::before {
@@ -947,6 +959,10 @@ nav#main-nav.nav-fixed #logo p {
 
 .menu.slide-in-x {
   height: 100vh;
+  -o-transition: transform 0.5s ease;
+  -ms-transition: transform 0.5s ease;
+  -moz-transition: transform 0.5s ease;
+  -webkit-transition: transform 0.5s ease;
   transition: transform 0.5s ease;
   transform: translateX(0);
 }
@@ -957,10 +973,7 @@ nav#main-nav.nav-fixed #logo p {
   padding: 0.5em;
   position: relative;
 }
-#main-menu .menu-item.active, #main-menu .menu-item:hover {
-  border-bottom: 1px solid #fff;
-}
-#main-menu .menu-item.show-quotation {
+#main-menu .menu-item .show-quotation {
   color: #fff;
   background-color: #3838a3;
 }
@@ -969,14 +982,23 @@ nav#main-nav.nav-fixed #logo p {
   margin-bottom: 0.5em;
 }
 
+@media screen and (max-width: 767px) {
+  #main-menu .menu-item > a,
+#main-menu .show-quotation {
+    padding: 0.5em 1em;
+  }
+}
+
 #main-menu .menu-item > a {
   display: block;
   width: 100%;
   height: 100%;
-  padding: 0.5em 0;
-  color: #000;
-  font-size: 0.8rem;
+  color: #fff;
+  font-size: 0.875rem;
   text-transform: capitalize;
+}
+#main-menu .menu-item > a.active, #main-menu .menu-item > a:hover {
+  border-bottom: 1px solid #fff;
 }
 
 #main-menu .menu-item,
@@ -991,7 +1013,6 @@ nav#main-nav.nav-fixed #logo p {
 
 @media screen and (max-width: 575px) {
   #main-menu .menu-item:hover {
-    background-color: rgba(0, 0, 0, 0.3);
     padding-left: 0.7em;
   }
 }
@@ -1024,29 +1045,61 @@ nav#main-nav.nav-fixed #logo p {
 }
 
 #main-banner {
-  height: 80vh;
-  width: 100%;
+  min-height: 550px;
+  height: 100vh;
   position: relative;
-  background: linear-gradient(135deg, rgba(13, 0, 0, 0.67) 40%, rgba(9, 1, 37, 0.48)), url("../img/denys-nevozhai-100695-unsplash.jpg");
   background: linear-gradient(135deg, rgba(13, 0, 0, 0.67) 40%, rgba(9, 1, 37, 0.48));
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 #main-banner .go-to-main {
-  display: none;
   position: absolute;
-  bottom: -8%;
+  bottom: 5%;
   left: 50%;
-  -o-transform: translate(-50%, -5%);
-  -ms-transform: translate(-50%, -5%);
-  -moz-transform: translate(-50%, -5%);
-  -webkit-transform: translate(-50%, -5%);
-  -khtml-transform: translate(-50%, -5%);
-  transform: translate(-50%, -5%);
-  animation: bounce 2s ease infinite;
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -khtml-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 10;
+  height: 50px;
+  width: 30px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  padding: 0.3em 0;
+}
+#main-banner .go-to-main::after {
+  content: "";
+  height: 40%;
+  width: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -khtml-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -o-transform-origin: top;
+  -ms-transform-origin: top;
+  -moz-transform-origin: top;
+  -webkit-transform-origin: top;
+  -khtml-transform-origin: top;
+  transform-origin: top;
+  animation: bounce 1.5s ease infinite;
 }
 #main-banner .go-to-main i {
+  display: none;
+  animation: bounce 1s ease infinite;
   font-size: 2rem;
   color: #111131;
 }
@@ -1056,20 +1109,20 @@ nav#main-nav.nav-fixed #logo p {
 
 @keyframes bounce {
   0% {
-    -o-transform: translate(-50%, -5%);
-    -ms-transform: translate(-50%, -5%);
-    -moz-transform: translate(-50%, -5%);
-    -webkit-transform: translate(-50%, -5%);
-    -khtml-transform: translate(-50%, -5%);
-    transform: translate(-50%, -5%);
+    -o-transform: translate(-50%, -50%) scaleY(0);
+    -ms-transform: translate(-50%, -50%) scaleY(0);
+    -moz-transform: translate(-50%, -50%) scaleY(0);
+    -webkit-transform: translate(-50%, -50%) scaleY(0);
+    -khtml-transform: translate(-50%, -50%) scaleY(0);
+    transform: translate(-50%, -50%) scaleY(0);
   }
   100% {
-    -o-transform: translate(-50%, 50%);
-    -ms-transform: translate(-50%, 50%);
-    -moz-transform: translate(-50%, 50%);
-    -webkit-transform: translate(-50%, 50%);
-    -khtml-transform: translate(-50%, 50%);
-    transform: translate(-50%, 50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -khtml-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 }
 #main-banner .iovon-slides {
@@ -1097,7 +1150,7 @@ nav#main-nav.nav-fixed #logo p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0.898), rgba(1, 1, 51, 0.3));
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(1, 1, 51, 0.3));
 }
 #main-banner .iovon-slides .slide .slide-text {
   height: 100%;
@@ -1106,32 +1159,28 @@ nav#main-nav.nav-fixed #logo p {
   justify-content: center;
   -ms-align-items: center;
   align-items: center;
+  text-align: center;
   -o-transition: all 0.8s ease;
   -ms-transition: all 0.8s ease;
   -moz-transition: all 0.8s ease;
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
 }
-#main-banner .iovon-slides .slide .slide-text h1 {
-  font-family: "Montserrat";
-  font-size: 2.8em;
-}
 
 #main-banner .iovon-slides img {
   width: 100%;
   height: 100%;
-  box-shadow: none;
 }
 
 #main-banner .slide-indicator {
   position: absolute;
   right: 5%;
-  z-index: 999;
-  margin-top: -2em;
+  z-index: 4;
+  margin-top: -8.2%;
 }
 
 #main-banner .slide-indicator .indicator {
-  background: #e2e2e2;
+  background: #efefef;
 }
 
 #main-banner .slide-indicator .indicator.active {
@@ -1155,10 +1204,23 @@ nav#main-nav.nav-fixed #logo p {
 #main-banner .slide .slide-content {
   height: 100%;
   width: 100%;
+  left: 50%;
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -khtml-transform: translateX(-50%);
+  transform: translateX(-50%);
   position: absolute;
   z-index: 3;
   padding: 0 8%;
 }
+@media screen and (min-width: 768) {
+  #main-banner .slide .slide-content {
+    width: 70%;
+  }
+}
+
 #main-banner .slide .slide-text h1,
 #main-banner .slide .slide-text p {
   color: #fff;
@@ -1167,55 +1229,27 @@ nav#main-nav.nav-fixed #logo p {
 
 #main-banner .slide .slide-text h1 {
   font-weight: 900;
-  font-size: calc(1.5rem + 1vw);
-  line-height: calc(1.5rem + 1vw + 5px);
   position: relative;
-  margin-bottom: 1em;
-}
-
-#main-banner .slide .slide-text h1::after {
-  content: "";
-  height: 2px;
-  width: 80px;
-  position: absolute;
-  bottom: -25%;
-  left: 50%;
-  -o-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -khtml-transform: translateX(-50%);
-  transform: translateX(-50%);
-  border-bottom-style: groove;
-}
-
-#main-banner .slide .slide-text p {
-  font-size: 0.875rem;
+  margin-bottom: 2em;
 }
 
 #main-banner .slide .slide-text .cta-btns {
-  margin: 2em auto 0;
+  margin: 4em auto 0;
 }
 
-#main-banner .slide .slide-text .btn, #main-banner .slide .slide-text #main-menu .menu-item.show-quotation, #main-menu #main-banner .slide .slide-text .menu-item.show-quotation {
+#main-banner .slide .slide-text .btn, #main-banner .slide .slide-text #main-menu .menu-item .show-quotation, #main-menu .menu-item #main-banner .slide .slide-text .show-quotation {
   font-size: 0.9rem;
   line-height: 0.9em;
   font-weight: 600;
-  margin: 2em auto 0;
+  margin: 0 auto;
   text-transform: capitalize;
   background-color: #fff;
   color: #000;
 }
-#main-banner .slide .slide-text .btn:hover, #main-banner .slide .slide-text #main-menu .menu-item.show-quotation:hover, #main-menu #main-banner .slide .slide-text .menu-item.show-quotation:hover {
-  opacity: 0.875;
+#main-banner .slide .slide-text .btn:hover, #main-banner .slide .slide-text #main-menu .menu-item .show-quotation:hover, #main-menu .menu-item #main-banner .slide .slide-text .show-quotation:hover {
+  opacity: 0.75;
 }
 
-@media screen and (min-width: 576px) {
-  /*  Secondary navigation style */
-  #secondary-nav {
-    display: none;
-  }
-}
 /* FOR SCREENS OF 768px IN WITH AND LARGER */
 @media screen and (min-width: 768px) {
   nav#top-contact-nav {
@@ -1241,8 +1275,6 @@ nav#main-nav.nav-fixed #logo p {
 
   nav#top-contact-nav .contact-email span {
     color: #3838a3;
-    /* font-weight: 600; */
-    /* font-style: italic; */
   }
 
   nav#top-contact-nav #top-social-links i.fa {
@@ -1312,11 +1344,7 @@ nav#main-nav.nav-fixed #logo p {
     font-size: 0.875rem;
   }
 
-  #main-banner .slide .slide-text p {
-    font-size: 1rem;
-  }
-
-  #main-banner .slide .slide-text .btn, #main-banner .slide .slide-text #main-menu .menu-item.show-quotation, #main-menu #main-banner .slide .slide-text .menu-item.show-quotation {
+  #main-banner .slide .slide-text .btn, #main-banner .slide .slide-text #main-menu .menu-item .show-quotation, #main-menu .menu-item #main-banner .slide .slide-text .show-quotation {
     font-size: 1.2rem;
     line-height: 1.2em;
   }
@@ -1366,6 +1394,7 @@ main {
   height: fit-content;
   overflow-x: hidden;
 }
+
 main > article {
   margin-bottom: 4em;
 }
@@ -1403,7 +1432,7 @@ main article .section-title,
   width: fit-content;
   margin: auto;
   text-transform: capitalize;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat Alternates", sans-serif;
   color: #111131;
   font-size: 1.3rem;
   font-weight: 600;
@@ -1453,10 +1482,10 @@ main article .section-title::before,
 /* WHY INTERSEVE */
 main article#why-us {
   margin-top: 3em;
-  background: #e2e2e2;
+  background: #efefef;
   background: #fbf96e;
   background: #111131;
-  padding: 1em 0 0;
+  padding: 2em 0 0;
   color: #fff;
 }
 main article#why-us .section-title {
@@ -1514,11 +1543,11 @@ main article#our-services {
   padding: 0 5%;
   text-align: center;
 }
-main article#our-services .section-body > .btn, main article#our-services #main-menu .section-body > .menu-item.show-quotation, #main-menu main article#our-services .section-body > .menu-item.show-quotation {
+main article#our-services .section-body > .btn, main article#our-services #main-menu .menu-item .section-body > .show-quotation, #main-menu .menu-item main article#our-services .section-body > .show-quotation {
   margin-top: 8em;
 }
 @media screen and (min-width: 576px) {
-  main article#our-services .section-body > .btn, main article#our-services #main-menu .section-body > .menu-item.show-quotation, #main-menu main article#our-services .section-body > .menu-item.show-quotation {
+  main article#our-services .section-body > .btn, main article#our-services #main-menu .menu-item .section-body > .show-quotation, #main-menu .menu-item main article#our-services .section-body > .show-quotation {
     font-size: 1.1rem;
   }
 }
@@ -1547,8 +1576,7 @@ main article#our-services .service-list .service {
   grid-column-gap: 10%;
   cursor: pointer;
   height: 200px;
-  border: 0.5px solid rgba(56, 56, 163, 0.2);
-  padding: 0.5em;
+  padding: 1em 0.5em;
   -o-border-radius: 5px;
   -ms-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -1566,7 +1594,7 @@ main article#our-services .service-list .service {
   box-shadow: 0 0px 7px rgba(0, 0, 0, 0.01), 0 7px 7px rgba(0, 0, 0, 0.05);
 }
 main article#our-services .service-list .service .service-icon {
-  width: calc(100% + 1vw);
+  width: calc(80% + 1vw);
   height: 100%;
   overflow: hidden;
 }
@@ -1607,7 +1635,7 @@ main article#our-services .service-list .service .service-text .service-name {
   margin-bottom: 0.3em;
   width: 100%;
 }
-main article#our-services .service-list .service .service-text .btn, main article#our-services .service-list .service .service-text #main-menu .menu-item.show-quotation, #main-menu main article#our-services .service-list .service .service-text .menu-item.show-quotation {
+main article#our-services .service-list .service .service-text .btn, main article#our-services .service-list .service .service-text #main-menu .menu-item .show-quotation, #main-menu .menu-item main article#our-services .service-list .service .service-text .show-quotation {
   font-size: 0.75rem;
   -o-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -1618,11 +1646,12 @@ main article#our-services .service-list .service .service-text .btn, main articl
 }
 
 main article#get-quote-find-estimate {
-  background: linear-gradient(135deg, rgba(3, 36, 66, 0.7) 40%, rgba(61, 9, 77, 0.65)), url("../src/img/solar-energy.jpg");
+  min-height: 150px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 40%, rgba(247, 250, 253, 0.3)), url("../src/img/gang-1745933_1920.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: fixed;
-  min-height: 150px;
+  background-position: center;
+  background-attachment: fixed;
 }
 @media screen and (min-width: 768px) {
   main article#get-quote-find-estimate {
@@ -1636,7 +1665,7 @@ main article#get-quote-find-estimate > section {
 main article#get-quote-find-estimate > section .cta {
   margin-top: 1em;
 }
-main article#get-quote-find-estimate > section .cta .btn, main article#get-quote-find-estimate > section .cta #main-menu .menu-item.show-quotation, #main-menu main article#get-quote-find-estimate > section .cta .menu-item.show-quotation {
+main article#get-quote-find-estimate > section .cta .btn, main article#get-quote-find-estimate > section .cta #main-menu .menu-item .show-quotation, #main-menu .menu-item main article#get-quote-find-estimate > section .cta .show-quotation {
   background: #3838a3;
 }
 main article#get-quote-find-estimate > section.grid, main article#get-quote-find-estimate > section.container {
@@ -1655,7 +1684,11 @@ main article#get-quote-find-estimate > section.grid, main article#get-quote-find
 @media screen and (min-width: 768px) {
   main article#get-quote-find-estimate > section.grid #get-quote, main article#get-quote-find-estimate > section.container #get-quote {
     padding: 0 5% 0;
+    height: 80%;
   }
+}
+main article#get-quote-find-estimate > section.grid #find-estimate, main article#get-quote-find-estimate > section.container #find-estimate {
+  background-color: #fff;
 }
 @media screen and (max-width: 767px) {
   main article#get-quote-find-estimate > section.grid #find-estimate, main article#get-quote-find-estimate > section.container #find-estimate {
@@ -1666,23 +1699,22 @@ main article#get-quote-find-estimate > section.grid, main article#get-quote-find
   main article#get-quote-find-estimate > section.grid #find-estimate, main article#get-quote-find-estimate > section.container #find-estimate {
     padding: 0 5% 0;
   }
-  main article#get-quote-find-estimate > section.grid #find-estimate .cta .btn:first-child, main article#get-quote-find-estimate > section.container #find-estimate .cta .btn:first-child, main article#get-quote-find-estimate > section.grid #find-estimate .cta #main-menu .menu-item.show-quotation:first-child, #main-menu main article#get-quote-find-estimate > section.grid #find-estimate .cta .menu-item.show-quotation:first-child, main article#get-quote-find-estimate > section.container #find-estimate .cta #main-menu .menu-item.show-quotation:first-child, #main-menu main article#get-quote-find-estimate > section.container #find-estimate .cta .menu-item.show-quotation:first-child {
+  main article#get-quote-find-estimate > section.grid #find-estimate .cta .btn:first-child, main article#get-quote-find-estimate > section.container #find-estimate .cta .btn:first-child, main article#get-quote-find-estimate > section.grid #find-estimate .cta #main-menu .menu-item .show-quotation:first-child, #main-menu .menu-item main article#get-quote-find-estimate > section.grid #find-estimate .cta .show-quotation:first-child, main article#get-quote-find-estimate > section.container #find-estimate .cta #main-menu .menu-item .show-quotation:first-child, #main-menu .menu-item main article#get-quote-find-estimate > section.container #find-estimate .cta .show-quotation:first-child {
     margin: 0 0.5em;
   }
 }
 main article#get-quote-find-estimate > section.grid #get-quote, main article#get-quote-find-estimate > section.container #get-quote,
 main article#get-quote-find-estimate > section.grid #find-estimate,
 main article#get-quote-find-estimate > section.container #find-estimate {
-  color: #fff;
+  color: #000;
   justify-content: center;
   -ms-align-items: center;
   align-items: center;
-  height: 80%;
+  padding: 1em;
 }
 main article#get-quote-find-estimate > section.grid #get-quote .title, main article#get-quote-find-estimate > section.container #get-quote .title,
 main article#get-quote-find-estimate > section.grid #find-estimate .title,
 main article#get-quote-find-estimate > section.container #find-estimate .title {
-  align-items: center;
   margin-bottom: 1em;
 }
 main article#get-quote-find-estimate > section.grid #get-quote .title img, main article#get-quote-find-estimate > section.container #get-quote .title img,
@@ -1694,21 +1726,20 @@ main article#get-quote-find-estimate > section.container #find-estimate .title i
 main article#get-quote-find-estimate > section.grid #get-quote .title .section-title, main article#get-quote-find-estimate > section.container #get-quote .title .section-title,
 main article#get-quote-find-estimate > section.grid #find-estimate .title .section-title,
 main article#get-quote-find-estimate > section.container #find-estimate .title .section-title {
-  color: #fff;
+  color: #000;
 }
 main article#get-quote-find-estimate > section.grid #get-quote .title .section-title::after, main article#get-quote-find-estimate > section.container #get-quote .title .section-title::after, main article#get-quote-find-estimate > section.grid #get-quote .title .section-title::before, main article#get-quote-find-estimate > section.container #get-quote .title .section-title::before,
 main article#get-quote-find-estimate > section.grid #find-estimate .title .section-title::after,
 main article#get-quote-find-estimate > section.container #find-estimate .title .section-title::after,
 main article#get-quote-find-estimate > section.grid #find-estimate .title .section-title::before,
 main article#get-quote-find-estimate > section.container #find-estimate .title .section-title::before {
-  background: #fff;
-  bottom: -75%;
+  background: #3838a3;
 }
 main article#get-quote-find-estimate > section.grid #get-quote .description, main article#get-quote-find-estimate > section.container #get-quote .description,
 main article#get-quote-find-estimate > section.grid #find-estimate .description,
 main article#get-quote-find-estimate > section.container #find-estimate .description {
   text-align: center;
-  color: #fff;
+  color: #000;
 }
 
 /* OUR WORK/PROJECTS */
@@ -1727,8 +1758,6 @@ main article#projects .projects {
 }
 main article#projects .projects .card {
   height: 250px;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.15);
   position: relative;
   -o-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
   -ms-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
@@ -1746,21 +1775,21 @@ main article#projects .projects .card-img::after {
   top: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(135deg, rgba(3, 36, 66, 0.5) 40%, rgba(61, 9, 77, 0.45));
+  background: linear-gradient(135deg, rgba(3, 36, 66, 0.2) 40%, rgba(61, 9, 77, 0.2));
 }
 main article#projects .projects .card-img img {
+  height: 70%;
   width: 150%;
-  object-fit: cover;
-  position: relative;
 }
 main article#projects .projects .card-text {
   position: absolute;
-  bottom: -2%;
-  height: 40%;
+  bottom: 0%;
+  height: 30%;
   width: 100%;
   z-index: 2;
   background-color: #fff;
   color: #000;
+  font-weight: 600;
 }
 @media screen and (min-width: 480px) {
   main article#projects .projects {
@@ -1781,7 +1810,7 @@ main article#partners section.body {
 /* ********* SAFETY STANDARD SECTION ********* */
 main article#safety-standard {
   min-height: 150px;
-  background-color: #e2e2e2;
+  background-color: #efefef;
 }
 main article#safety-standard > .section-body {
   height: 100%;
@@ -1803,6 +1832,9 @@ main article#safety-standard > .section-body > div {
   height: 90%;
   justify-content: center;
 }
+main article#safety-standard > .section-body #safety-standard_img {
+  position: relative;
+}
 main article#safety-standard > .section-body #safety-standard_img img {
   width: 100%;
   -o-object-fit: contain;
@@ -1813,6 +1845,14 @@ main article#safety-standard > .section-body #safety-standard_img img {
   main article#safety-standard > .section-body #safety-standard_img {
     margin-bottom: unset;
   }
+}
+main article#safety-standard > .section-body #safety-standard_img::after {
+  content: "";
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(239, 239, 239, 0.1), #efefef 70%);
+  bottom: -5%;
 }
 main article#safety-standard > .section-body #safety-standard_text {
   padding: 0.5em;
@@ -1825,14 +1865,6 @@ main article#safety-standard > .section-body #safety-standard_text {
     padding: 1em 0.5em;
     width: 95%;
     margin: auto;
-    left: 50%;
-    bottom: 20%;
-    -o-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -khtml-transform: translateX(-50%);
-    transform: translateX(-50%);
     -o-box-shadow: 0 6px 5px rgba(0, 0, 0, 0.1);
     -ms-box-shadow: 0 6px 5px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 6px 5px rgba(0, 0, 0, 0.1);
@@ -1913,17 +1945,17 @@ main article#build-with-us > section.grid .col .cta, main article#build-with-us 
   align-items: center;
   margin-top: 2em;
 }
-main article#build-with-us > section.grid .col .cta .btn, main article#build-with-us > section.container .col .cta .btn, main article#build-with-us > section.grid .col .cta #main-menu .menu-item.show-quotation, #main-menu main article#build-with-us > section.grid .col .cta .menu-item.show-quotation, main article#build-with-us > section.container .col .cta #main-menu .menu-item.show-quotation, #main-menu main article#build-with-us > section.container .col .cta .menu-item.show-quotation {
+main article#build-with-us > section.grid .col .cta .btn, main article#build-with-us > section.container .col .cta .btn, main article#build-with-us > section.grid .col .cta #main-menu .menu-item .show-quotation, #main-menu .menu-item main article#build-with-us > section.grid .col .cta .show-quotation, main article#build-with-us > section.container .col .cta #main-menu .menu-item .show-quotation, #main-menu .menu-item main article#build-with-us > section.container .col .cta .show-quotation {
   text-transform: uppercase;
   font-size: 0.9rem;
 }
 @media screen and (min-width: 576px) {
-  main article#build-with-us > section.grid .col .cta .btn, main article#build-with-us > section.container .col .cta .btn, main article#build-with-us > section.grid .col .cta #main-menu .menu-item.show-quotation, #main-menu main article#build-with-us > section.grid .col .cta .menu-item.show-quotation, main article#build-with-us > section.container .col .cta #main-menu .menu-item.show-quotation, #main-menu main article#build-with-us > section.container .col .cta .menu-item.show-quotation {
+  main article#build-with-us > section.grid .col .cta .btn, main article#build-with-us > section.container .col .cta .btn, main article#build-with-us > section.grid .col .cta #main-menu .menu-item .show-quotation, #main-menu .menu-item main article#build-with-us > section.grid .col .cta .show-quotation, main article#build-with-us > section.container .col .cta #main-menu .menu-item .show-quotation, #main-menu .menu-item main article#build-with-us > section.container .col .cta .show-quotation {
     font-size: 1rem;
   }
 }
 @media screen and (min-width: 768px) {
-  main article#build-with-us > section.grid .col .cta .btn, main article#build-with-us > section.container .col .cta .btn, main article#build-with-us > section.grid .col .cta #main-menu .menu-item.show-quotation, #main-menu main article#build-with-us > section.grid .col .cta .menu-item.show-quotation, main article#build-with-us > section.container .col .cta #main-menu .menu-item.show-quotation, #main-menu main article#build-with-us > section.container .col .cta .menu-item.show-quotation {
+  main article#build-with-us > section.grid .col .cta .btn, main article#build-with-us > section.container .col .cta .btn, main article#build-with-us > section.grid .col .cta #main-menu .menu-item .show-quotation, #main-menu .menu-item main article#build-with-us > section.grid .col .cta .show-quotation, main article#build-with-us > section.container .col .cta #main-menu .menu-item .show-quotation, #main-menu .menu-item main article#build-with-us > section.container .col .cta .show-quotation {
     font-size: 1rem;
   }
 }
@@ -2000,6 +2032,7 @@ form.on-page-contact-form p {
   color: #fff;
   overflow: visible;
   height: auto;
+  margin-bottom: 2em;
 }
 @media screen and (min-width: 586px) {
   #page-banner .title,
@@ -2035,7 +2068,7 @@ form.on-page-contact-form p {
 }
 #about-us > article {
   background: #fff;
-  padding: 0.875em 0.5em;
+  padding: 2em 1em;
   -o-border-radius: 5px;
   -ms-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -2059,10 +2092,10 @@ form.on-page-contact-form p {
   line-height: 1.5rem;
 }
 #about-us > article .title {
-  text-align: center;
   text-transform: capitalize;
 }
 #about-us > article .description {
+  text-align: center;
   margin: 0.8em 0;
 }
 
@@ -2218,7 +2251,7 @@ form.on-page-contact-form p {
   -khtml-transform: scale(1.3);
   transform: scale(1.3);
 }
-#services-container #services-list article.service-desc .btn, #services-container #services-list article.service-desc #main-menu .menu-item.show-quotation, #main-menu #services-container #services-list article.service-desc .menu-item.show-quotation {
+#services-container #services-list article.service-desc .btn, #services-container #services-list article.service-desc #main-menu .menu-item .show-quotation, #main-menu .menu-item #services-container #services-list article.service-desc .show-quotation {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
@@ -2344,7 +2377,7 @@ form.on-page-contact-form p {
   }
 }
 #projects-container #projects-list .project {
-  height: 200px;
+  height: 350px;
   -o-border-radius: 5px;
   -ms-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -2363,7 +2396,7 @@ form.on-page-contact-form p {
   background-color: #fff;
 }
 #projects-container #projects-list .project .project-image {
-  height: 60%;
+  height: 50%;
   overflow: hidden;
 }
 #projects-container #projects-list .project .project-image img {
@@ -2372,8 +2405,10 @@ form.on-page-contact-form p {
 #projects-container #projects-list .project .project-text {
   margin: 0.5em 0;
   font-size: 0.875em;
-  font-weight: 600;
   color: #111131;
+}
+#projects-container #projects-list .project .project-text .project-title {
+  font-weight: 600;
 }
 #projects-container #projects-list .project .cta {
   color: #3838a3;
@@ -2443,15 +2478,6 @@ main #contact-page-container .section-body .address-and-map ul li i[class*=phone
 main #contact-page-container .section-body .address-and-map ul li i[class*=envelope] {
   color: #111131;
 }
-main #contact-page-container .section-body .address-and-map ul li i[class*=facebook] {
-  color: #3838a3;
-}
-main #contact-page-container .section-body .address-and-map ul li i[class*=instagram] {
-  color: #92043a;
-}
-main #contact-page-container .section-body .address-and-map ul li i[class*=linkedin] {
-  color: #111131;
-}
 main #contact-page-container .section-body .address-and-map .contact-address,
 main #contact-page-container .section-body .address-and-map .write-us,
 main #contact-page-container .section-body .address-and-map .go-social {
@@ -2515,7 +2541,7 @@ footer ul.social li:not(:first-child):not(:last-child) {
 
 /* Back To Top */
 .back-to-top {
-  background: #3838a3;
+  background-color: rgba(56, 56, 163, 0.6);
   position: fixed;
   bottom: -50%;
   right: 5%;
@@ -2550,14 +2576,7 @@ footer ul.social li:not(:first-child):not(:last-child) {
   bottom: 3%;
 }
 .back-to-top:hover {
-  bottom: 2%;
-  background: #92043a;
-  -o-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
-  -ms-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
-  -khtml-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+  background-color: #3838a3;
 }
 .back-to-top:hover i {
   transition: all 1s ease;

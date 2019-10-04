@@ -25,7 +25,7 @@ class IovonHybridModal {
         this.modalOnUI = null;
         this.modalClose = document.createElement("div");
         this.modalCloseOnUI = null;
-        const lightboxBg = "black";
+        const lightboxBg = "white";
         this.lightbox = new IovonAwesomeLightBox({
             background: options.lightbox !== undefined ? options.lightbox.background || lightboxBg : lightboxBg,
             zIndex: options.lightbox !== undefined ? options.lightbox.zIndex || 9 : 9,
@@ -44,10 +44,8 @@ class IovonHybridModal {
         this.modal.id = "iovon-hybrid-modal";
         // add styles to the modal
         this.modal.style.cssText = `min-width: 250px;
-        width: calc(80% - 200px);
-        max-width: calc(480px);
-        margin-left: auto;
-        // max-height: 400px;
+        width: calc(90% - 200px);
+        max-width: calc(550px);
         background: rgb(246, 246, 246);
         position: absolute;
         top: 0%;
@@ -56,11 +54,10 @@ class IovonHybridModal {
         -o-transform: translateX(-50%);
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
-        padding: 1.5em 1em;
-        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+        padding: 4em 1em;
         z-index: 10;
         opacity: 0;
-        transition: all 0.75s ease;
+        transition: all 0.5s ease;
         -o-border-radius: 5px;
         -ms-border-radius: 5px;
         -moz-border-radius: 5px;
@@ -84,14 +81,14 @@ class IovonHybridModal {
             -o-flex-direction: row-reverse;
             -webkit-flex-direction: row-reverse;
             flex-direction: row-reverse;
-            color: rgb(126, 7, 56);
+            color: #AAAAAA;
             cursor: pointer;
             font-size: 1.1rem;
             text-align: right;
             margin-bottom: 0.5em;`;
-            // changing the reducing the padding top definition fo the modal when the showClose button is set to true
+            // changing the reducing the padding top definition for the modal when the showClose button is set to true
             this.modal.style.removeProperty("padding");
-            this.modal.style.padding = "1em 1em";
+            this.modal.style.padding = "1em";
 
             this.modal.appendChild(this.modalClose);
         }

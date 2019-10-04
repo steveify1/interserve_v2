@@ -1,10 +1,17 @@
 @include google-font("Montserrat");
+@include google-font("Montserrat+Alternates");
 @include google-font("Roboto+Slab");
-
+@include google-font("Work+Sans");
+@include google-font("Questrial");
+@include google-font("Quicksand");
+@include google-font("Quicksand:900");
+@include google-font("Quicksand:600");
 /* Font Families */
-$primaryFont: "Open Sans", sans-serif;
+// $primaryFont: "Work Sans", sans-serif;
+// $primaryFont: "Questrial", sans-serif;
+$primaryFont: "Montserrat Alternates", sans-serif;
 $secondaryFont: "Montserrat";
-$tertiaryFont: "Roboto Condensed";
+$tertiaryFont: "Quicksand";
 $testFont: "Caviar Dreams";
 
 // Font Sizes
@@ -14,7 +21,7 @@ $lineHeight: 1.5;
 
 // ********* Using the second-major(1.125) type scale ********
 
-body {
+body, a, button {
     font-size: $baseFont;
     line-height: $lineHeight;
     font-family: $primaryFont;
@@ -89,8 +96,11 @@ h1, h2, h3, h4, h5, h6 {
 
 
 // Some Beta Styles
-h1.headline {
-    @extend .yotta;
-    font-size: 3rem;
+.headline {
+    font-size: 2rem;
     font-weight: 900;
+
+    @media screen and (min-width: 769px) {
+        font-size: 2.8rem;
+    }
 }

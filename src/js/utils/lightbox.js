@@ -10,7 +10,7 @@ class IovonAwesomeLightBox {
         this.cbOnClose = null;
         this.background = {
             black: 'rgba(0, 0, 0, 0.6)',
-            white: 'rgba(255, 255, 255, 0.5)',
+            white: 'rgba(255, 255, 255, 0.9)',
             brown: 'rgba(62.5, 0, 0, 0.55)',
             blue: 'rgba(31, 31, 95, 0.6);'
         }

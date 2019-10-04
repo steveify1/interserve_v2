@@ -11461,6 +11461,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_lightbox__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils/lightbox */ "./src/js/utils/lightbox.js");
 /* harmony import */ var _utils_iovon_hybrid_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utils/iovon-hybrid-modal */ "./src/js/utils/iovon-hybrid-modal.js");
 /* harmony import */ var _components_quotation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/quotation */ "./src/js/components/quotation.js");
+// jshint esversion: 6
 
 
 
@@ -11521,15 +11522,15 @@ _app_config_js__WEBPACK_IMPORTED_MODULE_0__["interServe"].ui = () => {
                     </div>
                     
                     <ul id="main-menu" class="menu">
-					<li class="menu-item"><a href="./"><i class="fa fa-home"></i> <span>Home</span></a></li>
-					<li class="menu-item"><a href="services.html"><i class="fa fa-superpowers"></i> <span>Services</span></a></li>
-					<li class="menu-item"><a href="projects.html"><i class="fa fa-building"></i> <span>Projects</span></a></li>
-					<!-- <li class="menu-item"><a href="estimates.html"><i class="fa fa-bar-chart"></i> <span>Find Estimate</span></a></li> -->
-					<li class="menu-item"><a href="contact.html"><i class="fa fa-map-signs"></i> <span>Contact</span></a></li>
-					<li class="menu-item"><a href="about.html"><i class="fa fa-briefcase"></i> <span>About</span></a></li>
-					<li class="menu-item show-quotation"><i class="fa fa-table"></i> <span>Get Quote</span></li>
-					<!-- <li class="menu-item"><a href="blog.html"><i class="fa fa-globe"></i> <span>Blog</span></a></li> -->
-					<!-- <li class="menu-item"><a href=""><a href="">MENU <i class="fa fa-caret-down"></i></a></li> -->
+                        <li class="menu-item"><a href="./"><i class="fa fa-home"></i> <span>Home</span></a></li>
+                        <li class="menu-item"><a href="services.html"><i class="fa fa-superpowers"></i> <span>Services</span></a></li>
+                        <li class="menu-item"><a href="projects.html"><i class="fa fa-building"></i> <span>Projects</span></a></li>
+                        <!-- <li class="menu-item"><a href="estimates.html"><i class="fa fa-bar-chart"></i> <span>Find Estimate</span></a></li> -->
+                        <li class="menu-item"><a href="contact.html"><i class="fa fa-map-signs"></i> <span>Contact</span></a></li>
+                        <li class="menu-item"><a href="about.html"><i class="fa fa-briefcase"></i> <span>About</span></a></li>
+                        <li class="menu-item"><span class="show-quotation btn-full-width">Get Quote</span></li>
+                        <!-- <li class="menu-item"><a href="blog.html"><i class="fa fa-globe"></i> <span>Blog</span></a></li> -->
+                        <!-- <li class="menu-item"><a href=""><a href="">MENU <i class="fa fa-caret-down"></i></a></li> -->
                     </ul>
                     </nav>
             <!-- End of Main Navigation Section -->`;
@@ -11878,7 +11879,7 @@ class IovonHybridModal {
         this.modalOnUI = null;
         this.modalClose = document.createElement("div");
         this.modalCloseOnUI = null;
-        const lightboxBg = "black";
+        const lightboxBg = "white";
         this.lightbox = new _lightbox__WEBPACK_IMPORTED_MODULE_0__["default"]({
             background: options.lightbox !== undefined ? options.lightbox.background || lightboxBg : lightboxBg,
             zIndex: options.lightbox !== undefined ? options.lightbox.zIndex || 9 : 9,
@@ -11897,10 +11898,8 @@ class IovonHybridModal {
         this.modal.id = "iovon-hybrid-modal";
         // add styles to the modal
         this.modal.style.cssText = `min-width: 250px;
-        width: calc(80% - 200px);
-        max-width: calc(480px);
-        margin-left: auto;
-        // max-height: 400px;
+        width: calc(90% - 200px);
+        max-width: calc(550px);
         background: rgb(246, 246, 246);
         position: absolute;
         top: 0%;
@@ -11909,11 +11908,10 @@ class IovonHybridModal {
         -o-transform: translateX(-50%);
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
-        padding: 1.5em 1em;
-        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+        padding: 4em 1em;
         z-index: 10;
         opacity: 0;
-        transition: all 0.75s ease;
+        transition: all 0.5s ease;
         -o-border-radius: 5px;
         -ms-border-radius: 5px;
         -moz-border-radius: 5px;
@@ -11937,14 +11935,14 @@ class IovonHybridModal {
             -o-flex-direction: row-reverse;
             -webkit-flex-direction: row-reverse;
             flex-direction: row-reverse;
-            color: rgb(126, 7, 56);
+            color: #AAAAAA;
             cursor: pointer;
             font-size: 1.1rem;
             text-align: right;
             margin-bottom: 0.5em;`;
-            // changing the reducing the padding top definition fo the modal when the showClose button is set to true
+            // changing the reducing the padding top definition for the modal when the showClose button is set to true
             this.modal.style.removeProperty("padding");
-            this.modal.style.padding = "1em 1em";
+            this.modal.style.padding = "1em";
 
             this.modal.appendChild(this.modalClose);
         }
@@ -12123,7 +12121,7 @@ class IovonAwesomeLightBox {
         this.cbOnClose = null;
         this.background = {
             black: 'rgba(0, 0, 0, 0.6)',
-            white: 'rgba(255, 255, 255, 0.5)',
+            white: 'rgba(255, 255, 255, 0.9)',
             brown: 'rgba(62.5, 0, 0, 0.55)',
             blue: 'rgba(31, 31, 95, 0.6);'
         }

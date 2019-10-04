@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<title>Interserve - Find Estimates</title>
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="./dist/slider.css">
+	<link rel="stylesheet" href="./src/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./dist/style.css">
+</head>
+
+<body>
+	<input type="text" id="page" value="estimates" hidden>
+	<!-- Application Wrappper -->
+	<div id="wrapper">
+
+
+		<nav id="top-contact-nav">
+			<!-- Some contact info go here. E.g. email, social icons and mobile number -->
+			<div class="phone-email">
+				<div class="contact-phone">
+					<i class="fa fa-phone"></i>
+					<span>+2348157763833</span>
+				</div>
+
+				<div class="contact-email">
+					<i class="fa fa-envelope"></i>
+					<span>info@interservenigeria.com.ng</span>
+				</div>
+			</div>
+
+			<div id="top-social-links" class="right-col social-links">
+				<!-- <span>
+					<a href="">SIGN IN</a> |
+					<a href="">SIGN UP</a>
+				</span> -->
+				<!-- <i id="searce-icon" title="serach this site." class="fa fa-search"></i> -->
+				<a href="https://www.twitter.com" target="\_blank" rel="nonopener" rel="nonreferer"><i
+						title="follow on twitter" class="fa fa-twitter"></i></a>
+				<a href="linkedin.com" target="\_blank" rel="nonopener" rel="nonreferer"><i title="follow on linkedin"
+						class="fa fa-linkedin"></i></a>
+				<a href="instagram.com" target="\_blank" rel="nonopener" rel="nonreferer"><i title="follow on instagram"
+						class="fa fa-instagram"></i></a>
+			</div>
+		</nav>
+
+
+		<!-- Header Section -->
+		<header>
+
+
+			<!-- Secondary Navigation Section -->
+			<nav id="secondary-nav">
+
+				<ul id="secondary-menu" class="menu">
+					<!-- Hamburger Icon -->
+					<div id="secondary-hamburger" class="hamburger" title="Toggle Menu">
+						<div class="bar bar-1"></div>
+						<div class="bar bar-2"></div>
+						<div class="bar bar-3"></div>
+					</div>
+					<h2>TOOLS</h2>
+					<li class="menu-item"><a href=""><i class="fa fa-location-arrow"></i><span>Location
+								Finder</span></a></li>
+					<li class="menu-item"><a href=""><i class="fa fa-fire"></i><span>Home</span></a></li>
+					<li class="menu-item"><a href=""><i class="fa fa-suitcase"></i><span>Career</span></a></li>
+					<li class="menu-item"><a href=""><i class="fa fa-map"></i><span>Search Area</span></a></li>
+				</ul>
+			</nav>
+			<!-- End of Secondary Navigation Section -->
+
+			<!-- Banner Section -->
+			<div id="page-banner" class="flex flex-column">
+				<h1 class="title">Leverage Market Data To Earn Useful Insight.</h1>
+			</div>
+			<!-- End of Banner Section -->
+		</header>
+
+		<!-- End of Header Section -->
+
+
+		<!-- Main Section -->
+		<main>
+
+
+		</main>
+
+		<!-- End of Main Section -->
+		
+	</div>
+
+
+	<!-- SCRIPT -->
+	<script src="./dist/app.build.js"></script>
+</body>
+
+</html>

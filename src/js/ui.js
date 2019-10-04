@@ -61,15 +61,15 @@ interServe.ui = () => {
                     </div>
                     
                     <ul id="main-menu" class="menu">
-					<li class="menu-item"><a href="./"><i class="fa fa-home"></i> <span>Home</span></a></li>
-					<li class="menu-item"><a href="services.html"><i class="fa fa-superpowers"></i> <span>Services</span></a></li>
-					<li class="menu-item"><a href="projects.html"><i class="fa fa-building"></i> <span>Projects</span></a></li>
-					<!-- <li class="menu-item"><a href="estimates.html"><i class="fa fa-bar-chart"></i> <span>Find Estimate</span></a></li> -->
-					<li class="menu-item"><a href="contact.html"><i class="fa fa-map-signs"></i> <span>Contact</span></a></li>
-					<li class="menu-item"><a href="about.html"><i class="fa fa-briefcase"></i> <span>About</span></a></li>
-					<li class="menu-item show-quotation"><i class="fa fa-table"></i> <span>Get Quote</span></li>
-					<!-- <li class="menu-item"><a href="blog.html"><i class="fa fa-globe"></i> <span>Blog</span></a></li> -->
-					<!-- <li class="menu-item"><a href=""><a href="">MENU <i class="fa fa-caret-down"></i></a></li> -->
+                        <li class="menu-item"><a href="./"><i class="fa fa-home"></i> <span>Home</span></a></li>
+                        <li class="menu-item"><a href="services.html"><i class="fa fa-superpowers"></i> <span>Services</span></a></li>
+                        <li class="menu-item"><a href="projects.html"><i class="fa fa-building"></i> <span>Projects</span></a></li>
+                        <!-- <li class="menu-item"><a href="estimates.html"><i class="fa fa-bar-chart"></i> <span>Find Estimate</span></a></li> -->
+                        <li class="menu-item"><a href="contact.html"><i class="fa fa-map-signs"></i> <span>Contact</span></a></li>
+                        <li class="menu-item"><a href="about.html"><i class="fa fa-briefcase"></i> <span>About</span></a></li>
+                        <li class="menu-item"><span class="show-quotation btn-full-width">Get Quote</span></li>
+                        <!-- <li class="menu-item"><a href="blog.html"><i class="fa fa-globe"></i> <span>Blog</span></a></li> -->
+                        <!-- <li class="menu-item"><a href=""><a href="">MENU <i class="fa fa-caret-down"></i></a></li> -->
                     </ul>
                     </nav>
             <!-- End of Main Navigation Section -->`;

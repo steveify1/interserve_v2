@@ -48,6 +48,16 @@
     transform: $values;
 }
 
+@mixin transformOrigin($val) {
+    // $values is sa variable argument whic will allow us to add an arbitrary number of arguments to the transform function
+    -o-transform-origin: $val;
+    -ms-transform-origin: $val;
+    -moz-transform-origin: $val;
+    -webkit-transform-origin: $val;
+    -khtml-transform-origin: $val;
+    transform-origin: $val;
+}
+
 /* ****** Transitions ****** */
 
 @mixin transitionAll($duration) {
@@ -152,5 +162,13 @@
     @media screen and (max-width: $size) {
         @content;
     }
+}
+
+
+@mixin objectFit($fit: cover, $position: center) {
+    object-fit: $fit;
+    -o-object-fit: $fit;
+    object-position: $position;
+    -o-object-position: $position;
 }
 
