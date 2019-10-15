@@ -24,7 +24,8 @@ $lineHeight: 1.5;
 body, a, button {
     font-size: $baseFont;
     line-height: $lineHeight;
-    font-family: $primaryFont;
+    // font-family: $primaryFont;
+    font-family: $secondaryFont;
 }
 
 // Set margin bottom of text related elements to half the value of the base line height
@@ -92,6 +93,7 @@ h6, .kilo {
 // Set Font Weights
 h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
+    font-family: $primaryFont;
 }
 
 

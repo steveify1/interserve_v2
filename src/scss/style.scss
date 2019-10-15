@@ -12,7 +12,9 @@ body {
   letter-spacing: 1px;
   line-height: inherit;
   margin: inherit;
-  background: #f1feff;
+  // background: #c5dfe2;
+  // background: #f3feff;
+  background: #fbffff;
   overflow-x: hidden;
   position: relative;
   max-width: 100vw;
@@ -231,8 +233,6 @@ ul {
 *
 **************************/
 header {
-  /* min-height: 85vh; */
-  // min-height: 400px;
   position: relative;
 }
 
@@ -369,7 +369,7 @@ nav#main-nav.nav-fixed #logo p {
 
 #main-menu {
   display: block;
-  background: $primaryColorDark;
+  background: $white;
   width: 80%;
   padding: 4em 0;
   position: fixed;
@@ -378,6 +378,7 @@ nav#main-nav.nav-fixed #logo p {
   left: 0;
   height: 100vh;
   z-index: 300;
+  @include boxShadow(unset);
 }
 
 #main-menu::before {
@@ -432,7 +433,7 @@ nav#main-nav.nav-fixed #logo p {
   display: block;
   width: 100%;
   height: 100%;
-  color: $white;
+  color: $gray;
   font-size: 0.875rem;
   text-transform: capitalize;
 
@@ -489,7 +490,7 @@ nav#main-nav.nav-fixed #logo p {
 
 #main-banner {
   min-height: 550px;
-  height: 100vh;
+  height: 95vh;
   position: relative;
   background: linear-gradient(
     135deg,
@@ -832,7 +833,6 @@ main article .section-title,
   width: fit-content;
   margin: auto;
   text-transform: capitalize;
-  font-family: $primaryFont;
   color: $primaryColorDark;
   font-size: 1.3rem;
   font-weight: 600;
@@ -921,7 +921,7 @@ main article#why-us {
       svg {
         @include circle(80px);
         margin-bottom: 1em;
-        background: $primaryColor;
+        // background: $primaryColor;
         @include crossCenter;
       }
     }
@@ -1070,12 +1070,12 @@ main article#get-quote-find-estimate {
       #get-quote {
         @media screen and (min-width: 768px) {
           padding: 0 $mainPadding-x 0;
-          height: 80%;
         }
       }
 
       #find-estimate {
         background-color: #fff;
+        height: 80%;
         @media screen and (max-width: 767px) {
           margin-top: 3em;
         }
@@ -1142,7 +1142,7 @@ main article#projects .projects {
   .card {
     height: 250px;
     position: relative;
-    @include boxShadow(0 8px 15px rgba(0, 0, 0, 0.3));
+    @include boxShadow(0 8px 15px rgba(0, 0, 0, 0.1));
 
     &-img {
       overflow: hidden;
@@ -1196,8 +1196,8 @@ main article#partners {
 
 /* ********* SAFETY STANDARD SECTION ********* */
 main article#safety-standard {
-  min-height: 150px;
-  background-color: $lightGray;
+  // background-color: transparentize($lightGray, 0.3);
+  background-color: rgba(0, 191, 255, 0.164);
 
   > .section-body {
     height: 100%;
@@ -1207,14 +1207,14 @@ main article#safety-standard {
     position: relative;
 
     @media screen and (min-width: 768px) {
-      grid-template-columns: 1.5fr 1.8fr;
+      grid-template-columns: 1.5fr 1.5fr;
       grid-column-gap: 5%;
     }
 
     > div {
       width: 100%;
       height: 100%;
-      height: 90%;
+      height: 100%;
       justify-content: center;
     }
 
@@ -1224,25 +1224,25 @@ main article#safety-standard {
         width: 100%;
         -o-object-fit: contain;
         object-fit: contain;
-        max-width: 280px;
+        max-width: 320px;
       }
 
       @media screen and (min-width: 768px) {
         margin-bottom: unset;
       }
 
-      &::after {
-        content: "";
-        height: 100px;
-        width: 100%;
-        position: absolute;
-        background: linear-gradient(
-          180deg,
-          transparentize($lightGray, 0.9),
-          $lightGray 70%
-        );
-        bottom: -5%;
-      }
+      // &::after {
+      //   content: "";
+      //   height: 100px;
+      //   width: 100%;
+      //   position: absolute;
+      //   background: linear-gradient(
+      //     180deg,
+      //     transparentize(rgba(0, 191, 255, 0.164), 0.9),
+      //     rgba(0, 191, 255, 0.164) 70%
+      //   );
+      //   bottom: 0%;
+      // }
     }
 
     #safety-standard_text {
@@ -1255,10 +1255,11 @@ main article#safety-standard {
         padding: 1em 0.5em;
         width: 95%;
         margin: auto;
-        @include boxShadow(0 6px 5px rgba(0, 0, 0, 0.1));
+        // @include boxShadow(0 6px 5px rgba(0, 0, 0, 0.1));
         @include borderRadius($cardRadius);
         background-color: $white;
         text-align: center;
+        @include transform(translateY(-1em));
       }
 
       .text {
@@ -1613,12 +1614,7 @@ form.on-page-contact-form {
             width: 100%;
             -o-object-fit: cover;
             object-fit: cover;
-            @include transition(all 1s ease);
             cursor: pointer;
-
-            &:hover {
-              @include transform(scale(1.3));
-            }
           }
         }
       }
@@ -1667,7 +1663,7 @@ form.on-page-contact-form {
         }
 
         .service-gallery {
-          @include transform(translateX(20%));
+          @include transform(translateX(15%));
           opacity: 0;
 
           .gallery-item {
@@ -1712,7 +1708,7 @@ form.on-page-contact-form {
   }
 
   #projects-list {
-    grid-row-gap: 3em;
+    grid-row-gap: 1em;
 
     @media screen and (min-width: 480px) {
       grid-column-gap: 1%;
@@ -1730,7 +1726,7 @@ form.on-page-contact-form {
     .project {
       height: 350px;
       @include borderRadius($cardRadius);
-      @include boxShadow(0 7px 10px rgba(0, 0, 0, 0.2));
+      @include boxShadow(0 7px 10px rgba(0, 0, 0, 0.1));
       overflow: hidden;
       cursor: pointer;
       position: relative;
@@ -1936,7 +1932,7 @@ footer {
   }
 
   &:hover {
-      background-color: $primaryColor;
+    background-color: $primaryColor;
     i {
       transition: all 1s ease;
     }
