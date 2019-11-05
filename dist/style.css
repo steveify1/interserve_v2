@@ -171,7 +171,7 @@ table {
 body, a, button {
   font-size: 100%;
   line-height: 1.5;
-  font-family: "Montserrat";
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 h1,
@@ -2277,12 +2277,12 @@ form.on-page-contact-form p {
     transform: unset;
   }
   #services-container #services-list article.service-desc .service-gallery {
-    -o-transform: translateX(15%);
-    -ms-transform: translateX(15%);
-    -moz-transform: translateX(15%);
-    -webkit-transform: translateX(15%);
-    -khtml-transform: translateX(15%);
-    transform: translateX(15%);
+    -o-transform: translateX(5%);
+    -ms-transform: translateX(5%);
+    -moz-transform: translateX(5%);
+    -webkit-transform: translateX(5%);
+    -khtml-transform: translateX(5%);
+    transform: translateX(5%);
     opacity: 0;
   }
   #services-container #services-list article.service-desc .service-gallery .gallery-item {
@@ -2291,6 +2291,9 @@ form.on-page-contact-form p {
   }
   #services-container #services-list article.service-desc .service-gallery .gallery-item img {
     height: 100%;
+  }
+  #services-container #services-list article.service-desc .btn, #services-container #services-list article.service-desc #main-menu .menu-item .show-quotation, #main-menu .menu-item #services-container #services-list article.service-desc .show-quotation {
+    margin: 0 auto 0 0;
   }
   #services-container #services-list article.service-desc.active {
     position: static;
@@ -2310,6 +2313,11 @@ form.on-page-contact-form p {
     -khtml-transform: translate(0);
     transform: translate(0);
   }
+}
+
+#solar-power li {
+  list-style-type: disc;
+  margin-left: 2em;
 }
 
 /**************************

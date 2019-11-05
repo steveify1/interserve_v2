@@ -1663,7 +1663,7 @@ form.on-page-contact-form {
         }
 
         .service-gallery {
-          @include transform(translateX(15%));
+          @include transform(translateX(5%));
           opacity: 0;
 
           .gallery-item {
@@ -1674,6 +1674,10 @@ form.on-page-contact-form {
               height: 100%;
             }
           }
+        }
+
+        .btn {
+          margin: 0 auto 0 0;
         }
 
         &.active {
@@ -1691,6 +1695,15 @@ form.on-page-contact-form {
     }
   }
 }
+
+#solar-power {
+  li {
+    list-style-type: disc;
+    margin-left: 2em;
+  }
+}
+
+
 
 /**************************
 *

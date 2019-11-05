@@ -24,8 +24,8 @@ $lineHeight: 1.5;
 body, a, button {
     font-size: $baseFont;
     line-height: $lineHeight;
-    // font-family: $primaryFont;
-    font-family: $secondaryFont;
+    font-family: $primaryFont;
+    // font-family: $secondaryFont;
 }
 
 // Set margin bottom of text related elements to half the value of the base line height
