@@ -2277,12 +2277,12 @@ form.on-page-contact-form p {
     transform: unset;
   }
   #services-container #services-list article.service-desc .service-gallery {
-    -o-transform: translateX(5%);
-    -ms-transform: translateX(5%);
-    -moz-transform: translateX(5%);
-    -webkit-transform: translateX(5%);
-    -khtml-transform: translateX(5%);
-    transform: translateX(5%);
+    -o-transform: translateX(7%);
+    -ms-transform: translateX(7%);
+    -moz-transform: translateX(7%);
+    -webkit-transform: translateX(7%);
+    -khtml-transform: translateX(7%);
+    transform: translateX(7%);
     opacity: 0;
   }
   #services-container #services-list article.service-desc .service-gallery .gallery-item {
